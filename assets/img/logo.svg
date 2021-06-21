@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="110.84286"
+   height="86.125443"
+   viewBox="0 0 1108.4286 861.25445"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg12"
+   sodipodi:docname="radioArtemisa_imagotipo.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:export-filename="D:\Documentos\YOAN\HTDOCS\webArtemisa\WWW CAMBIOS\banner\imagotipo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="657"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="0.85666107"
+     inkscape:cx="239.46973"
+     inkscape:cy="25.474405"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12"
+     inkscape:document-rotation="0" />
+  <g
+     id="layer102"
+     fill="#fefdfd"
+     fill-rule="evenodd"
+     transform="translate(-1796.8006,-1627.1854)" />
+  <path
+     id="path916"
+     style="opacity:1;fill:#800000;fill-opacity:1;stroke-width:5.26278"
+     d="M 553.77542,0 C 429.34088,2.8601164e-4 310.00321,49.432345 222.01463,137.42093 161.9189,197.51669 119.82532,272.2402 99.166468,353.21958 97.85507,353.52874 11.818174,361.847 0.79878049,396.48908 -5.9188428,490.64607 31.207331,666.19046 56.92033,702.74049 c 25.712952,36.55013 105.47061,35.84129 174.06588,40.49547 -64.586,-76.7138 -100.00356,-173.77301 -100.00441,-274.05423 0,-112.85576 44.83209,-221.08738 124.63345,-300.88812 79.80134,-79.800744 188.03563,-124.633787 300.89141,-124.633482 112.85518,0 221.08748,44.832808 300.88805,124.633482 79.80067,79.8006 124.63278,188.03293 124.63335,300.88812 0,100.28122 -35.41821,197.34043 -100.00427,274.05423 70.68347,1.4294 140.54901,3.28584 167.68021,-24.97119 27.131,-28.25732 68.7226,-212.9317 56.5444,-317.04586 -8.6468,-33.24384 -96.9606,-48.03382 -97.9254,-48.24472 C 987.64147,272.08915 945.57484,197.45592 885.53943,137.42093 797.55005,49.432202 678.21068,-5.0598836e-4 553.77542,0 Z m 0.97497,86.894106 c -213.83374,0 -387.17952,173.348044 -387.17855,387.181784 0,94.12188 34.2848,185.02099 96.44356,255.69787 l 293.68568,-551.22378 291.4388,547.00428 c 59.88684,-70.10375 92.79089,-159.27775 92.79222,-251.47837 0,-213.83504 -173.34667,-387.182804 -387.18171,-387.181784 z m 2.95069,364.961064 -191.89276,360.16697 c 57.74065,32.28234 122.78967,49.23201 188.94207,49.2323 67.91771,0 134.64067,-17.86463 193.47141,-51.80196 z"
+     sodipodi:nodetypes="cscczccscscczccsccccccccccccc" />
+</svg>

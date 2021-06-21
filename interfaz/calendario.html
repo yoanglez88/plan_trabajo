@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<script src="../assets/js/jquery.slim.min.js"></script>
+	<link href='../assets/js/lib/main.css' rel='stylesheet' />
+	<script src='../assets/js/lib/main.js'></script>
+	<script src='../assets/js/lib/locales-all.js'></script>
+	<script src='../assets/js/calendario.js'></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() { 
+			var containerEl = document.getElementById('external-events-list');
+			new FullCalendar.Draggable(containerEl, {
+				itemSelector: '.fc-event',
+				eventData: function(eventEl) {
+					return {
+						title: eventEl.innerText.trim()
+					}
+				}
+			});
+		
+			var calendarEl = document.getElementById('calendar');
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				locale: 'es',
+				editable: true,
+				selectable: true,
+				businessHours: true,
+				nowIndicator: true,
+				navLinks: true,
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth',//,timeGridWeek,timeGridDay,listWeek'
+				},
+				initialView: 'dayGridMonth',
+				weekNumbers: true,
+				weekNumberCalculation: 'ISO',
+				dayMaxEvents: true, // allow "more" link when too many events
+				events: {
+					url: '../assets/php/get-events.php',
+					failure: function() {
+						document.getElementById('script-warning').style.display = 'block'
+					}
+				},
+				loading: function(bool) {
+					document.getElementById('loading').style.display =
+						bool ? 'block' : 'none';
+				},
+				droppable: true, // this allows things to be dropped onto the calendar
+				drop: function(arg) {
+					// is the "remove after drop" checkbox checked?
+					if (document.getElementById('drop-remove').checked) {
+						// if so, remove the element from the "Draggable Events" list
+						arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+					}
+				}	  
+			});
+			calendar.render();
+		});
+	</script>
+	<link href="../assets/css/eventos.css" rel="stylesheet" />
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/css/calendario.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+	<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+		<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Información Personal</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuración</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="nav-scroller bg-white shadow-sm">
+		<nav class="nav nav-underline">
+			<a class="nav-link active" href="#">Estadisticas</a>
+			<a class="nav-link" href="#">
+				Total Planes
+				<span class="badge badge-pill bg-light align-text-bottom">27</span>
+			</a>
+			<a class="nav-link" href="#">Quejas y sugerencias</a>
+		</nav>
+	</div>
+	<div id='wrap'>
+	  <div id='external-events'>
+      <h4>Draggable Events</h4>
+
+      <div id='external-events-list'>
+        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+          <div class='fc-event-main'>My Event 1</div>
+        </div>
+        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+          <div class='fc-event-main'>My Event 2</div>
+        </div>
+        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+          <div class='fc-event-main'>My Event 3</div>
+        </div>
+        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+          <div class='fc-event-main'>My Event 4</div>
+        </div>
+        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+          <div class='fc-event-main'>My Event 5</div>
+        </div>
+      </div>
+
+      <p>
+        <input type='checkbox' id='drop-remove' />
+        <label for='drop-remove'>remove after drop</label>
+      </p>
+    </div>
+		<div id='script-warning'>
+		<code>php/get-events.php</code> must be running.
+		</div>
+
+		<div id='loading'>loading...</div>
+		<div id='calendar-wrap'>
+			<div id='calendar'></div>
+		</div>
+	</div>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/calendario.js"></script>
+</body>
+</html>
