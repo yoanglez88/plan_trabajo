@@ -11,12 +11,12 @@ Descargar e instalar el binario desde https://nodejs.org/es/download/
 * npm
 ```sh
 npm i fullcalendar@5.8.0
-```
-```sh
 npm i jquery@3.6.0
-```
-```sh
 npm i bootstrap@5.0.2
+```
+Si estas detrás de un proxy:
+```sh
+npm config set proxy http://[user]:[pass]@[server]:[port]
 ```
 
 ## Utilizar Composer:
@@ -25,21 +25,26 @@ Ejecutar en una consola para descargar e instalar composer:
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" 
 php composer-setup.php
 ```
-
-Luego en un archivo de comandos:
+Si estas detrás de un proxy, utiliza curl donde el binario se encuentra en https://curl.se/windows/, y ejecutas los siguientes comandos:
+```sh 
+curl --proxy "http://[user]:[pass]@[server]:[port]" https://getcomposer.org/installer > composer-setup.php
+php composer-setup.php
+```
+En un archivo de comandos con nombre "composer" escribe las siguientes lineas:
 ```sh
 @echo off
 setlocal disabledelayedexpansion
 php "%~dp0composer.phar" %*
 ```
-Agregar al path la ruta donde se encuentra el archivo de comandos.
 
 ### Instalar los componentes a utilizar con composer:
-Estos componentes son necesario para el funcionamiento del proyecto.
+Si estas detrás de un proxy, ejecutar el comando:
+```sh
+set http_proxy=http://[user]:[pass]@[server]:[port]
+```
+Se ejecuta el archivo de comandos con nombre "composer" con  parametros de los nombres de componentes:
 * composer
 ```sh
-composer require lincanbin/php-pdo-mysql-class:1.18
-```
-```sh
-composer require phpoffice/phpspreadsheet:2.2
+composer require lincanbin/php-pdo-mysql-class:2.2
+composer require phpoffice/phpspreadsheet:1.18
 ```
